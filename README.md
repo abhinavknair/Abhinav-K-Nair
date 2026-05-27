@@ -5,7 +5,7 @@ Welcome to my physics research and simulation showcase.
 ---
 
 ## 1. Particle in a Box Simulation
-This script calculates and visualizes the wave functions and energy eigenvalues of a particle in a one-dimensional infinite potential well.
+This script calculates and visualizes the wave functions and energy eigenvalues of a particle in a one-dimensional infinite potential well by solving the time-independent Schrödinger equation using FDM.
 
 * [View Python Source Code](01_Particle_in_a_box/particle_in_a_box.py)
 
