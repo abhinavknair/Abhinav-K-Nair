@@ -1,4 +1,4 @@
-# Abhinav-K-Nair
+# Computational Physics & Simulations 
 
 Welcome to my physics research and simulation showcase.
 
