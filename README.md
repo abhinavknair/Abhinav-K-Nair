@@ -138,7 +138,14 @@ This script generates Gaussian (normal) random numbers from uniformly distribute
 
 ---
 
-## 13. Inverse transform method
+## 13. Inverse Transform method
 This script generates a Poisson random number from a uniform random number using the Inverse Transform method. First, for a given value of the rate parameter ($\lambda$), the cumulative probability of Poisson distribution, $F(k)$, is found. The range of $k$ is chosen in such a way that the cumulative probability, $F(k)$, covers the entire range of a uniform random number (i.e., 0 to 1). The corresponding Poisson random number is found by comparing the uniform random number ($x$) with the values of cumulative probability: for any adjacent cumulative probabilities $F(i)$ and $F(j)$, such that $$i<j$$, if $x$ satisfies $$F(i)<x\leq F(j)$$, then $j$ is the corresponding Poisson random number.
 
 * [View Python Source Code](13_Inverse_transform/inverse_transform.py)
+
+---
+
+## 14. Histogram (without using plt.hist)
+This script plots a histogram of random numbers without directly using the built-in command plt.hist. This is done by defining bins and counting the number of random numbers that belongs to each of the bins.
+
+* [View Python Source Code](14_Histogram/histogram.py)
