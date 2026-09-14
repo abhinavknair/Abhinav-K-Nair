@@ -135,3 +135,8 @@ This script calculates the mean and median of a set of random numbers without us
 This script generates Gaussian (normal) random numbers from uniformly distributed random numbers using the Box-Muller method.
 
 * [View Python Source Code](12_Box_Muller_method/box_muller_method.py)
+
+---
+
+## 13. Inverse transform method
+This script generates a Poisson random number from a uniform random number using the Inverse Transform method. First, for a given value of the rate parameter ($\lambda$), the cumulative probability of Poisson distribution, F(k), is found. The range of k is chosen in such a way that cumulative probability, $F(k)$, covers the entire range of a uniform random number (i.e., 0 to 1). The corresponding Poisson random number is found by comparing the uniform random number (x) with the values of cumulative probability: for any adjacent cumulative probabilities F(i) and F(j), such that i<j, if x satisfies F(i)<x<=
