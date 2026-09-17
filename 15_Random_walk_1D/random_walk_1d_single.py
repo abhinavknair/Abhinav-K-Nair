@@ -12,7 +12,7 @@ bins_n=np.arange(-N,N+1,1) #intervals for counting
 counts_n=np.zeros(len(bins_n),dtype=int) #array to store counts
 n=0 #number of steps (not the right steps)
 for i in range(N):
-  prob_left=random.random()
+  prob_left=random.random() #generates a random probability
   if prob_left<p:
     n+=1
   else:
