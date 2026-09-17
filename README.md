@@ -165,7 +165,7 @@ This script calculates the mean, variance, mean-square displacement, and corresp
 * [View Python Source Code](15_Random_walk_1D/random_walk_1d_single.py)
 
 #### (ii) Ensemble of random walks
-This script calculates the mean, variance, mean-square displacement, and probability distribution for an ensemble of independent, one-dimensional random walks. The final displacement after each random walk is calculated using the formula $$X=2n-N$$, where $n$ is the number of right steps, and $N$ is the total number of steps in the random walk.
+This script calculates the mean, variance, mean-square displacement, and probability distribution for an ensemble of independent, one-dimensional random walks. The final displacement after each random walk is calculated using the formula $$X=2n-N$$, where $n$ is the number of right steps, and $N$ is the total number of steps in a single random walk.
 
 * [View Python Source Code](15_Random_walk_1D/random_walk_1d_ensemble.py)
 
