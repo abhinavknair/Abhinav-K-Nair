@@ -154,3 +154,24 @@ This script plots a histogram of random numbers without directly using the built
 Below is the histogram of 100 uniform random numbers:
 
 ![Histogram plot](14_Histogram/download.png)
+
+---
+
+## 15. 1D Random Walk
+
+# (i) Single Random Walk
+This script calculates the mean, variance, mean-square displacement, and corresponding probability distribution for a single, one-dimensional random walk. These are calculated for the instantaneous values of position of the walker.
+
+* [View Python Source Code](15_Random_walk_1D/random_walk_1d_single.py)
+
+# (ii) Ensemble of random walks
+This script calculates the mean, variance, mean-square displacement, and probability distribution for an ensemble of independent, one-dimensional random walks. The final displacement after each random walk is calculated using the formula $$X=2n-N$$, where $n$ is the number of right steps, and $N$ is the total number of steps in the random walk.
+
+* [View Python Source Code](15_Random_walk_1D/random_walk_1d_ensemble.py)
+
+### Simulation Result
+Below is the probability distribution of random numbers:
+
+# (i) Single random walk
+
+![Single random walk plot](15_Random_walk_1D/rand walk sngle.png)
