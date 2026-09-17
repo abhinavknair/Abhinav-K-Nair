@@ -157,7 +157,7 @@ Below is the histogram of 100 uniform random numbers:
 
 ---
 
-## 15. 1D Random Walk
+## 15. Random Walk (1D)
 
 #### (i) Single Random Walk
 This script calculates the mean, variance, mean-square displacement, and corresponding probability distribution for a single, one-dimensional random walk. These are calculated for the instantaneous values of position of the walker.
