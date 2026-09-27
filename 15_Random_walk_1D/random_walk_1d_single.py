@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 N=100 #total steps
 p=0.5
 q=1-p
-X=np.zeros((1,N))
-X_sq=np.zeros((1,N))
+X=np.zeros((N))
+X_sq=np.zeros((N))
 bins_n=np.arange(-N,N+1,1) #intervals for counting
 counts_n=np.zeros(len(bins_n),dtype=int) #array to store counts
 n=0 #number of steps (not the right steps)
@@ -17,12 +17,12 @@ for i in range(N):
     n+=1
   else:
     n-=1
-  X[0,i]=n #position of walker
-  X_sq[0,i]=n**2
+  X[i]=n #position of walker
+  X_sq[i]=n**2
 print('X=',X)
 
 #counting
-for j in X.flatten():
+for j in X:
   for i in range(len(bins_n)):
     low=bins_n[i]
     high=bins_n[i+1]
@@ -34,21 +34,21 @@ X2=X.copy()
 
 #mean
 for j in range(1,N):
-  X[0,j]=X[0,j-1]+X[0,j]
-mean_X=X[0,j]/N
+  X[j]=X[j-1]+X[j]
+mean_X=X[j]/N
 print('mean x=',mean_X)
 
 #variance
 Y=(X2-mean_X)**2
 for j in range(1,N):
-  Y[0,j]=Y[0,j-1]+Y[0,j]
-var_X=Y[0,j]/N
+  Y[j]=Y[j-1]+Y[j]
+var_X=Y[j]/N
 print('var X=',var_X)
 
 #mean-square displacement
 for j in range(1,N):
-  X_sq[0,j]=X_sq[0,j-1]+X_sq[0,j]
-mean_X_sq=X_sq[0,j]/N
+  X_sq[j]=X_sq[j-1]+X_sq[j]
+mean_X_sq=X_sq[j]/N
 print('mean X sq=',mean_X_sq)
 
 #prob_n=counts_n/N
