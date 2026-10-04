@@ -16,9 +16,8 @@ for j in x:
 print(counts)
 
 #x-coordinates for bars should be the left edges of the bins (bins[:-1])
-plt.bar(bins[:-1],counts,width=bins[1]-bins[0],align='edge',edgecolor='black')
+plt.bar(bins[:-1],counts,width=bins[1]-bins[0],edgecolor='black')
 plt.xlabel("range")
 plt.ylabel("counts")
 plt.title("uniform random numbers (x)")
-plt.grid()
 plt.show()
