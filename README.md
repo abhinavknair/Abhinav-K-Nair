@@ -153,7 +153,7 @@ This script plots a histogram of random numbers without directly using the built
 ### Simulation Result
 Below is the histogram of 100 uniform random numbers:
 
-![Histogram plot](14_Histogram/download.png)
+
 
 ---
 
