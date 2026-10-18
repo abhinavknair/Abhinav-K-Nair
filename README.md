@@ -135,7 +135,7 @@ This script calculates the mean and median of a set of random numbers without us
 This script generates Gaussian (normal) random numbers from uniformly distributed random numbers using the Box-Muller method. With two independently distributed uniform random numbers $$U_{1}$$ and $$U_{2}$$ over the interval (0,1), two independent normally distributed random numbers $$Z_{1}$$ and $$Z_{2}$$ can be obtained as
 
 $$
-Z_{1}=\sqrt{-2\ln U_{1}}cos{2\pi U_{2}} $and$ Z2=\sqrt{-2\ln U_{1}}sin{2\pi U_{2}}.
+Z_{1}=\sqrt{-2\ln U_{1}}\cos{2\pi U_{2}} $and$ Z2=\sqrt{-2\ln U_{1}}\sin{2\pi U_{2}}.
 $$
 
 * [View Python Source Code](12_Box_Muller_method/box_muller_method.py)
