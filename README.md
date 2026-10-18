@@ -148,7 +148,7 @@ $$
 The range of $k$ is chosen in such a way that the cumulative probability $F(k)$ covers the entire range of a uniform random number, i.e., 0 to 1. The corresponding Poisson random number is found by comparing the uniform random number ($x$) with the values of cumulative probability: for any two adjacent cumulative probabilities $F(i)$ and $F(j)$, such that $$i<j$$, if $x$ satisfies 
 
 $$
-F(i)<x\leq F(j),
+F(i)\lt x\leq F(j),
 $$
 
 then $j$ is the corresponding Poisson random number.
