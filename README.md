@@ -145,7 +145,7 @@ This script generates a Poisson random number from a uniform random number using
 
 ---
 
-## 14. Histogram (without using plt.hist)
+## 14. Histogram (using bins method)
 This script plots a histogram of random numbers without directly using the built-in command plt.hist. This is done by defining bins and counting the number of random numbers that belong to each of the bins.
 
 * [View Python Source Code](14_Histogram/histogram.py)
