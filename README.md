@@ -132,7 +132,7 @@ This script calculates the mean and median of a set of random numbers without us
 ---
 
 ## 12. Box-Muller Method
-This script generates Gaussian (normal) random numbers from uniformly distributed random numbers using the Box-Muller method. With two independently distributed uniform random numbers $$U_{1}$$ and $$U_{2}$$ over the interval (0,1), two independent normally distributed random numbers $$Z_{1}$$ and $$Z_{2}$$ can be obtained as
+This script generates Gaussian (normal) random numbers from uniformly distributed random numbers using the Box-Muller method. Given two independently distributed uniform random numbers $$U_{1}$$ and $$U_{2}$$ over the interval $(0,1)$, two independent normally distributed random numbers $$Z_{1}$$ and $$Z_{2}$$ can be obtained as
 
 $$
 Z_{1}=\sqrt{-2\ln U_{1}}\cos(2\pi U_{2}) \quad\text{and}\quad Z_{2}=\sqrt{-2\ln U_{1}}\sin(2\pi U_{2}).
