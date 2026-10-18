@@ -132,7 +132,15 @@ This script calculates the mean and median of a set of random numbers without us
 ---
 
 ## 12. Box-Muller Method
-This script generates Gaussian (normal) random numbers from uniformly distributed random numbers using the Box-Muller method.
+This script generates Gaussian (normal) random numbers from uniformly distributed random numbers using the Box-Muller method. With two independently distributed uniform random numbers $$U_{1}$$ and $$U_{2}$$ over the interval (0,1), two independent normally distributed random numbers $$Z_{1}$$ and $$Z_{2}$$ can be obtained as
+
+$$
+Z_{1}=\sqrt{-2\ln U_{1}}cos{2\pi U_{2}} and
+$$
+
+$$
+Z2=\sqrt{-2\ln U_{1}}sin{2\pi U_{2}}.
+
 
 * [View Python Source Code](12_Box_Muller_method/box_muller_method.py)
 
@@ -142,10 +150,10 @@ This script generates Gaussian (normal) random numbers from uniformly distribute
 This script generates a Poisson random number from a uniform random number using the Inverse Transform method. First, for a given value of the rate parameter ($\lambda$), the cumulative probability of Poisson distribution, $F(k)$, is found using
 
 $$
-F(k)=P(X\leq k)=\sum_{i=0}^{k}P(X=i)=\sum_{i=0}^{k}\frac{e^{-\lambda}\lambda^{i}}{i!}.
+F(k)=P(X\leq k)=\sum_{i=0}^{k}P(X=i)=\sum_{i=0}^{k}\frac{e^{-\lambda}\lambda^{i}}{i!},
 $$
 
-The range of $k$ is chosen in such a way that the cumulative probability $F(k)$ covers the entire range of a uniform random number, i.e., 0 to 1. The corresponding Poisson random number is found by comparing the uniform random number ($x$) with the values of cumulative probability: for any two adjacent cumulative probabilities $F(i)$ and $F(j)$, such that $$i<j$$, if $x$ satisfies 
+where $X$ is a Poisson random variable. The range of $k$ is chosen in such a way that the cumulative probability $F(k)$ covers the entire range of a uniform random number, i.e., 0 to 1. The corresponding Poisson random number is found by comparing the uniform random number ($x$) with the values of cumulative probability: for any two adjacent cumulative probabilities $F(i)$ and $F(j)$, such that $$i<j$$, if $x$ satisfies 
 
 $$
 F(i)\lt x\leq F(j),
