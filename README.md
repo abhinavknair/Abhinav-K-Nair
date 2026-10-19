@@ -176,7 +176,7 @@ Below is the histogram of 100 uniform random numbers:
 ## 15. Random Walk (1D)
 
 #### (i) Single Random Walk
-This script calculates the mean, variance, mean-square displacement, and corresponding probability distribution for a single, one-dimensional random walk. These are calculated for the instantaneous values of position of the walker.
+This script calculates the mean, variance, mean-square displacement, and corresponding probability distribution for a single, one-dimensional random walk. These are calculated for the instantaneous position of the walker.
 
 * [View Python Source Code](15_Random_walk_1D/random_walk_1d_single.py)
 
@@ -186,13 +186,40 @@ This script calculates the probability distribution as a function of position an
 * [View Python Source Code](15_Random_walk_1D/random_walk_1d_ensemble.py)
 
 ### Simulation Result
-Below are the plots for the probability distribution and the mean-square displacement:
-
 #### (i) Single random walk
+Below is the probability distribution plot for a single random walk of 100 steps: 
 
-![Single random walk plot](15_Random_walk_1D/rw_1.png)
+![1D single random walk plot](15_Random_walk_1D/rw_1.png)
 
 #### (ii) Ensemble of random walks
+Below are the probability distribution and mean-square displacement plots for 1000 independent random walks each of 100 steps:
 
-![Single random walk plot](15_Random_walk_1D/download.png)
-![Single random walk plot](15_Random_walk_1D/download1.png)
+![1D ensemble random walk plot](15_Random_walk_1D/download.png)
+![1D ensemble random walk plot](15_Random_walk_1D/download1.png)
+
+---
+
+## 16. Random Walk (2D)
+
+### (i) Single Random Walk
+This script plots the trajectory (Y vs. X) for a single, two-dimensional random walk.
+
+* [View Python Source Code](16_Random_walk_2D/random_walk_2d_single.py)
+
+### (ii) Ensemble of random walks
+This script calculates and plots the mean-square displacement as a function of steps for an ensemble of independent, two-dimensional random walks.
+
+* [View Python Source Code](16_Random_walk_2D/random_walk_2d_ensemble.py)
+
+### Simulation Result
+### (i) Single Random Walk
+Below is the trajectory for a single 2D random walk of 100 steps:
+
+![2D single random walk plot](16_Random_walk_2D/download.png)
+
+### (ii) Ensemble of random walks
+Below is the mean-square displacement plot for 1000 independent random walks each of 100 steps:
+
+![2D ensemble random walk plot](16_Random_walk_2D/download1.png)
+
+---
