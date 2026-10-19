@@ -175,7 +175,7 @@ Below is the histogram of 100 uniform random numbers:
 
 ## 15. Random Walk (1D)
 
-#### (i) Single Random Walk
+#### (i) Single random walk
 This script calculates the mean, variance, mean-square displacement, and corresponding probability distribution for a single, one-dimensional random walk. These are calculated for the instantaneous position of the walker.
 
 * [View Python Source Code](15_Random_walk_1D/random_walk_1d_single.py)
@@ -201,7 +201,7 @@ Below are the probability distribution and mean-square displacement plots for 10
 
 ## 16. Random Walk (2D)
 
-#### (i) Single Random Walk
+#### (i) Single random walk
 This script plots the trajectory (Y vs. X) for a single, two-dimensional random walk.
 
 * [View Python Source Code](16_Random_walk_2D/random_walk_2d_single.py)
@@ -212,7 +212,7 @@ This script calculates and plots the mean-square displacement as a function of s
 * [View Python Source Code](16_Random_walk_2D/random_walk_2d_ensemble.py)
 
 ### Simulation Result
-#### (i) Single Random Walk
+#### (i) Single random walk
 Below is the trajectory for a single 2D random walk of 100 steps:
 
 ![2D single random walk plot](16_Random_walk_2D/download2.png)
