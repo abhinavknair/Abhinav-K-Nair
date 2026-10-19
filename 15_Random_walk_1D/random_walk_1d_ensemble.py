@@ -1,59 +1,55 @@
 import random
 import numpy as np
-import math
 import matplotlib.pyplot as plt
 
-walks=10 #number of independent walks
-N=20 #total steps
+walks=1000 #no. of independent random walks
+N=100 #total steps
 p=0.5
-q=1-p
-n1=np.zeros((walks))
-P_n=np.zeros((walks))
-X=np.zeros((walks))
-X_sq=np.zeros((walks))
+X=np.zeros((walks,N)) #array to store instantaneous position
+X2=np.zeros((walks,N))
+msd=np.zeros((N)) #array to store mean-square displacement
+
 for j in range(walks):
   n=0
   for i in range(N):
-    prob_left=random.random() #generates a random probability
+    prob_left=random.random()
     if prob_left<p:
       n+=1
     else:
-      n+=0
-  n1[j]=n
-  X1=2*n-N #displacement
-  X[j]=X1
-  X_sq[j]=X1**2 #squared displacement
-  P=(math.factorial(N)/(math.factorial(n)*math.factorial(N-n)))*(p**n)*(q**(N-n))
-  P_n[j]=P
+      n-=1
+    X[j,i]=n
+    X2[j,i]=n**2
 print('X=',X)
-X2=X.copy() #making a copy of X for future use
+print('X flatten=',X.flatten())
 
-#mean
-for j in range(1,walks):
-  X[j]=X[j-1]+X[j]
-#print(X)
-mean_X=X[j]/walks
-print('mean_X=',mean_X)
+for i in range(N):
+  for j in range(1,walks):
+    X2[j,i]=X2[j-1,i]+X2[j,i] #summing over all independent walks for a single position
+  mean_X2=X2[j,i]/walks
+  msd[i]=mean_X2
 
-#variance
-Y=(X2-mean_X)**2
-print('Y=',Y)
-for j in range(1,walks):
-  Y[j]=Y[j-1]+Y[j]
-var_X=Y[j]/walks
-print('var_X=',var_X)
+bins_n=np.arange(-N,N+1,1)
+counts_n=np.zeros(len(bins_n)-1,dtype=int)
+for j in X.flatten():
+  for i in range(len(bins_n)-1):
+    low=bins_n[i]
+    high=bins_n[i+1]
+    if low<=j<high:
+      counts_n[i]+=1
+      break
+print('counts_n=',counts_n)
 
-#mean-square displacement
-print('X_sq=',X_sq)
-for j in range(1,walks):
-  X_sq[j]=X_sq[j-1]+X_sq[j]
-mean_X_sq=X_sq[j]/walks
-print('mean_X_sq=',mean_X_sq)
+prob_n=counts_n/(N*walks)
+plt.figure(figsize=(8,4))
+plt.plot(bins_n[:-1],prob_n)
+plt.xlabel('position')
+plt.ylabel('prob')
+plt.title('Ensemble of Random Walks')
+plt.show()
 
-#print('n1=',n1)
-#print('P_n=',P_n)
-
-plt.bar(n1,P_n)
-plt.xlabel('n')
-plt.ylabel('P_n')
+step=np.arange(1,N+1,1)
+plt.figure(figsize=(8,4))
+plt.plot(step,msd,color='green')
+plt.xlabel('steps')
+plt.ylabel('msd')
 plt.show()
