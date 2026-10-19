@@ -181,12 +181,12 @@ This script calculates the mean, variance, mean-square displacement, and corresp
 * [View Python Source Code](15_Random_walk_1D/random_walk_1d_single.py)
 
 #### (ii) Ensemble of random walks
-This script calculates the probability distribution as a function of position and the ensemble-averaged mean-squared displacement (msd) for an ensemble of independent, one-dimensional random walks.
+This script calculates the probability distribution as a function of position and the ensemble-averaged mean-square displacement (msd) for an ensemble of independent, one-dimensional random walks.
 
 * [View Python Source Code](15_Random_walk_1D/random_walk_1d_ensemble.py)
 
 ### Simulation Result
-Below is the probability distribution for a single random walk (i) and :
+Below are the plots for the probability distribution and the mean-square displacement:
 
 #### (i) Single random walk
 
@@ -194,4 +194,5 @@ Below is the probability distribution for a single random walk (i) and :
 
 #### (ii) Ensemble of random walks
 
-![Single random walk plot](15_Random_walk_1D/rw_2.png)
+![Single random walk plot](15_Random_walk_1D/download.png)
+![Single random walk plot](15_Random_walk_1D/download1.png)
