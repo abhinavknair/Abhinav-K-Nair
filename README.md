@@ -215,7 +215,7 @@ This script calculates and plots the mean-square displacement as a function of s
 #### (i) Single Random Walk
 Below is the trajectory for a single 2D random walk of 100 steps:
 
-![2D single random walk plot](16_Random_walk_2D/download.png)
+![2D single random walk plot](16_Random_walk_2D/download2.png)
 
 #### (ii) Ensemble of random walks
 Below is the mean-square displacement plot for 1000 independent random walks each of 100 steps:
