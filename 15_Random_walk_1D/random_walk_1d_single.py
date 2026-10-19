@@ -8,9 +8,7 @@ p=0.5
 q=1-p
 X=np.zeros((N))
 X_sq=np.zeros((N))
-bins_n=np.arange(-N,N+1,1) #intervals for counting
-counts_n=np.zeros(len(bins_n),dtype=int) #array to store counts
-n=0 #number of steps (not the right steps)
+n=0 #number of steps
 for i in range(N):
   prob_left=random.random() #generates a random probability
   if prob_left<p:
@@ -22,8 +20,10 @@ for i in range(N):
 print('X=',X)
 
 #counting
+bins_n=np.arange(-N,N+1,1) #intervals for counting
+counts_n=np.zeros(len(bins_n),dtype=int) #array to store counts
 for j in X:
-  for i in range(len(bins_n)):
+  for i in range(len(bins_n)-1):
     low=bins_n[i]
     high=bins_n[i+1]
     if low<=j<high:
@@ -51,9 +51,10 @@ for j in range(1,N):
 mean_X_sq=X_sq[j]/N
 print('mean X sq=',mean_X_sq)
 
-#prob_n=counts_n/N
-print('pron_n=',prob_n)
-plt.plot(bins_n,prob_n)
+prob_n=counts_n/N
+#print('prob_n=',prob_n)
+plt.plot(bins_n[:-1],prob_n)
 plt.xlabel('position (X)')
 plt.ylabel('prob')
+plt.title('Single Random Walk')
 plt.show()
