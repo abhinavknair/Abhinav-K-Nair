@@ -201,23 +201,23 @@ Below are the probability distribution and mean-square displacement plots for 10
 
 ## 16. Random Walk (2D)
 
-### (i) Single Random Walk
+#### (i) Single Random Walk
 This script plots the trajectory (Y vs. X) for a single, two-dimensional random walk.
 
 * [View Python Source Code](16_Random_walk_2D/random_walk_2d_single.py)
 
-### (ii) Ensemble of random walks
+#### (ii) Ensemble of random walks
 This script calculates and plots the mean-square displacement as a function of steps for an ensemble of independent, two-dimensional random walks.
 
 * [View Python Source Code](16_Random_walk_2D/random_walk_2d_ensemble.py)
 
 ### Simulation Result
-### (i) Single Random Walk
+#### (i) Single Random Walk
 Below is the trajectory for a single 2D random walk of 100 steps:
 
 ![2D single random walk plot](16_Random_walk_2D/download.png)
 
-### (ii) Ensemble of random walks
+#### (ii) Ensemble of random walks
 Below is the mean-square displacement plot for 1000 independent random walks each of 100 steps:
 
 ![2D ensemble random walk plot](16_Random_walk_2D/download1.png)
