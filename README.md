@@ -206,7 +206,7 @@ This script plots the trajectory (y vs. x), and also the squared displacement as
 * [View Python Source Code](16_Random_walk_2D/random_walk_2d_single.py)
 
 #### (ii) Ensemble of random walks
-This script calculates and plots the mean-squared displacement as a function of steps for an ensemble of independent, two-dimensional random walks. It also verifies that $\langle r^{2}(n)\rangle$
+This script calculates and plots the mean-squared displacement ($\langle r^{2}\rangle$) as a function of the number of steps ($n$) for an ensemble of independent, two-dimensional random walks. It verifies that $\langle r^{2}(n)\rangle \propto n$.
 
 * [View Python Source Code](16_Random_walk_2D/random_walk_2d_ensemble.py)
 
