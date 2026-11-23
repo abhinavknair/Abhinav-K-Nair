@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 N=100 #total steps
 p=0.5 #probability of going to the right
-X=np.zeros((N))
+x=np.zeros((N))
 R=np.zeros((N))
 n=0 #position of the walker
 for i in range(N):
@@ -14,35 +14,35 @@ for i in range(N):
     n+=1
   else:
     n-=1
-  X[i]=n
+  x[i]=n
   R[i]=n**2 #squared position
-print('X=',X)
+print('x=',x)
 
 #counting
-bins_n=np.arange(-N,N+1,1) #intervals for counting
-counts_n=np.zeros(len(bins_n)-1,dtype=int) #array to store counts
-for j in X:
-  for i in range(len(bins_n)-1):
-    low=bins_n[i]
-    high=bins_n[i+1]
+bins_x=np.arange(-N,N+1,1) #intervals for counting
+counts_x=np.zeros(len(bins_x)-1,dtype=int) #array to store counts
+for j in x:
+  for i in range(len(bins_x)-1):
+    low=bins_x[i]
+    high=bins_x[i+1]
     if low<=j<high:
-      counts_n[i]+=1
+      counts_x[i]+=1
       break
-print('counts_n=',counts_n)
-X2=X.copy()
+print('counts_x=',counts_x)
+x2=x.copy()
 
 #mean
 for j in range(1,N):
-  X[j]=X[j-1]+X[j]
-mean_X=X[j]/N
-print('mean X',mean_X)
+  x[j]=x[j-1]+x[j]
+mean_x=x[j]/N
+print('mean x',mean_x)
 
 #variance
-Y=(X2-mean_X)**2
+Y=(x2-mean_x)**2
 for j in range(1,N):
   Y[j]=Y[j-1]+Y[j]
-var_X=Y[j]/N
-print('var X=',var_X)
+var_x=Y[j]/N
+print('var x=',var_x)
 
 #mean-squared displacement (msd)
 for j in range(1,N):
@@ -50,9 +50,9 @@ for j in range(1,N):
 msd=R[j]/N 
 print('msd=',msd)
 
-prob_n=counts_n/N
-plt.plot(bins_n[:-1],prob_n)
-plt.xlabel('position (X)')
+prob_x=counts_x/N
+plt.plot(bins_x[:-1],prob_x)
+plt.xlabel('position (x)')
 plt.ylabel('prob')
 plt.title('Single Random Walk')
 plt.show()
