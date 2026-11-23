@@ -13,10 +13,10 @@ for i in range(len(x)):
 #print(x)
 
 #finding the median
-if len(x)%2==1:
-  median_t=x[len(x)//2]
-elif len(x)%2==0:
-  median_t=(x[(len(x)-1)//2]+x[len(x)//2])/2
+if len(x)%2==0:
+  median_t=(x[len(x)//2-1]+x[len(x)//2])/2
+else:
+  median_t=x[(len(x)-1)//2]
 print("median_t:",median_t)
 
 #finding the mean
