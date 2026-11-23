@@ -3,8 +3,10 @@ import matplotlib.pyplot as plt
 
 walks=1000
 N=100
-R2=np.zeros((walks,N))
-msd=np.zeros((N))
+x=np.zeros((walks,N))
+y=np.zeros((walks,N))
+R=np.zeros((walks,N))
+
 for j in range(walks):
   n=0 #horizontal position
   m=0 #vertical position
@@ -18,21 +20,20 @@ for j in range(walks):
       m+=1
     elif choice==3:
       m-=1
-    #print('n=',n)
-    #print('m=',m)
-    R2[j,i]=n**2+m**2
-    #print('R2=',R2)
+    x[j,i]=n
+    y[j,i]=m
+    R[j,i]=n**2+m**2
 
-for i in range(N):
-  for j in range(1,walks):
-    R2[j,i]=R2[j-1,i]+R2[j,i]
-  mean_R2=R2[j,i]/walks
-  msd[i]=mean_R2
+msd=np.zeros((N))
+for j in range(N):
+  for i in range(1,walks):
+    R[i,j]=R[i-1,j]+R[i,j]
+  msd[j]=R[i,j]/walks
 print('msd=',msd)
 
-step=np.arange(1,N+1,1)
-plt.plot(step,msd,color='green')
-plt.xlabel('step')
+steps=np.arange(1,N+1,1)
+plt.plot(steps,msd,color='green')
+plt.xlabel('steps')
 plt.ylabel('msd')
 plt.grid()
 plt.show()
