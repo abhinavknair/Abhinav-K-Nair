@@ -194,8 +194,7 @@ Below is the probability distribution plot for a single random walk of 100 steps
 #### (ii) Ensemble of random walks
 Below are the probability distribution and mean-square displacement plots for 1000 independent random walks each of 100 steps:
 
-![1D ensemble random walk plot](15_Random_walk_1D/download.png)
-![1D ensemble random walk plot](15_Random_walk_1D/download1.png)
+![1D ensemble random walk plot](15_Random_walk_1D/rw_2.png)
 
 ---
 
